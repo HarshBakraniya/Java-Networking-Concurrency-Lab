@@ -57,11 +57,28 @@ The ThreadPool directory also contains an experimental client designed to genera
 
 <h2>Current configuration:</h2>
 
-Configuration| Value
-Total requests| 10,000
-Target request rate| 500 requests/second
-Client worker threads| 500
-Request scheduling| ScheduledExecutorService
+<table>
+  <tr>
+    <th>Configuration</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Total requests</td>
+    <td>10,000</td>
+  </tr>
+  <tr>
+    <td>Target request rate</td>
+    <td>500 requests/second</td>
+  </tr>
+  <tr>
+    <td>Client worker threads</td>
+    <td>500</td>
+  </tr>
+  <tr>
+    <td>Request scheduling</td>
+    <td>ScheduledExecutorService</td>
+  </tr>
+</table>
 
 <h2>The client uses two separate executors:</h2>
 
@@ -103,12 +120,44 @@ The repository is organized into three directories, each containing its respecti
 
 <h2>Architecture Comparison</h2>
 
-Feature| Single-Threaded| Multithreaded| Thread Pool
-Client handling| Sequential| Concurrent| Concurrent
-Thread creation| Main server thread| New thread per client| Reusable worker threads
-Thread management| Basic| Manual| ExecutorService
-Resource management| Simple| Can become expensive| Controlled worker count
-Scalability| Limited| Depends on thread resources| Better controlled
+<table>
+<tr>
+  <th>Feature</th>
+  <th>Single-Threaded</th>
+  <th>Multithreaded</th>
+  <th>Thread Pool</th>
+</tr>
+<tr>
+  <td>Client handling</td>
+  <td>Sequential</td>
+  <td>Concurrent</td>
+  <td>Concurrent</td>
+</tr>
+<tr>
+  <td>Thread creation</td>
+  <td>Main server thread</td>
+  <td>New thread per client</td>
+  <td>Reusable worker threads</td>
+</tr>
+<tr>
+  <td>Thread management</td>
+  <td>Basic</td>
+  <td>Manual</td>
+  <td>ExecutorService</td>
+</tr>
+<tr>
+  <td>Resource management</td>
+  <td>Simple</td>
+  <td>Can become expensive</td>
+  <td>Controlled worker count</td>
+</tr>
+<tr>
+  <td>Scalability</td>
+  <td>Limited</td>
+  <td>Depends on thread resources</td>
+  <td>Better controlled</td>
+</tr>
+</table>
 
 <h2>Technologies Used</h2>
 
