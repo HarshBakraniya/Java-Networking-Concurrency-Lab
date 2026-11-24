@@ -1,4 +1,4 @@
-Java Networking & Concurrency Lab
+#Java Networking & Concurrency Lab
 
 A hands-on Java project exploring TCP socket programming, client-server communication, multithreading, and thread-pool-based request handling.
 
@@ -82,21 +82,24 @@ This is an experimental learning tool for observing concurrency and request hand
 
 Project Structure
 
-java-networking-concurrency-lab/
-│
-├── SingleThreaded/
-│   ├── Server.java
-│   └── Client.java
-│
-├── MultiThreaded/
-│   ├── Server.java
-│   └── Client.java
-│
-├── ThreadPool/
-│   ├── Server.java
-│   └── Client.java
-│
-└── README.md
+The repository is organized into three directories, each containing its respective server and client implementation.
+
+- SingleThreaded
+  
+  - "Server.java"
+  - "Client.java"
+
+- MultiThreaded
+  
+  - "Server.java"
+  - "Client.java"
+
+- ThreadPool
+  
+  - "Server.java"
+  - "Client.java"
+
+- "README.md" — Project documentation.
 
 Architecture Comparison
 
