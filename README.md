@@ -6,11 +6,11 @@ This repository contains three different server implementations, each demonstrat
 
 The main objective of this project is to understand how Java handles network communication and how different threading approaches affect server-side request processing.
 
-Project Overview
+<h2>Project Overview</h2>
 
 The project explores three server architectures:
 
-1. Single-Threaded Server
+<h2>1. Single-Threaded Server</h2>
 
 A basic TCP server that handles client connections sequentially.
 
@@ -22,11 +22,11 @@ Concepts explored:
 - "PrintWriter" and "BufferedReader"
 - Connection handling and resource management
 
-2. Multithreaded Server
+<h2>2. Multithreaded Server</h2>
 
 An improved implementation that creates a separate thread for each accepted client connection.
 
-Concepts explored:
+<h3>Concepts explored:</h3>
 
 - Java "Thread" class
 - "Runnable" interface
@@ -35,11 +35,11 @@ Concepts explored:
 - Thread creation and execution
 - Automatic flushing in PrintWriter
 
-3. Thread-Pool Server
+<h2>3. Thread-Pool Server</h2>
 
 A server implementation using Java's "ExecutorService" and a fixed thread pool to manage client connections.
 
-Concepts explored:
+<h3>Concepts explored:</h3>
 
 - "ExecutorService"
 - "Executors.newFixedThreadPool()"
@@ -51,11 +51,11 @@ Concepts explored:
 
 Unlike the multithreaded implementation, this approach reuses a fixed number of worker threads instead of creating a new thread for every incoming connection.
 
-Client-Side Request Testing
+<h3>Client-Side Request Testing</h3>
 
 The ThreadPool directory also contains an experimental client designed to generate multiple requests and observe server behaviour under concurrent workloads.
 
-Current configuration:
+<h2>Current configuration:</h2>
 
 Configuration| Value
 Total requests| 10,000
@@ -63,14 +63,14 @@ Target request rate| 500 requests/second
 Client worker threads| 500
 Request scheduling| ScheduledExecutorService
 
-The client uses two separate executors:
+<h2>The client uses two separate executors:</h2>
 
 - ScheduledExecutorService: Schedules request submissions at configured intervals.
 - ExecutorService: Executes individual client requests using a fixed thread pool.
 
 It also uses "AtomicInteger" to track successful and failed requests.
 
-At the end of execution, it displays:
+<h2>At the end of execution, it displays:</h2>
 
 - Total requests
 - Successful requests
@@ -80,7 +80,7 @@ At the end of execution, it displays:
 
 This is an experimental learning tool for observing concurrency and request handling, not a production-grade benchmarking framework.
 
-Project Structure
+<h2>Project Structure</h2>
 
 The repository is organized into three directories, each containing its respective server and client implementation.
 
@@ -101,7 +101,7 @@ The repository is organized into three directories, each containing its respecti
 
 - "README.md" — Project documentation.
 
-Architecture Comparison
+<h2>Architecture Comparison</h2>
 
 Feature| Single-Threaded| Multithreaded| Thread Pool
 Client handling| Sequential| Concurrent| Concurrent
@@ -110,7 +110,7 @@ Thread management| Basic| Manual| ExecutorService
 Resource management| Simple| Can become expensive| Controlled worker count
 Scalability| Limited| Depends on thread resources| Better controlled
 
-Technologies Used
+<h2>Technologies Used</h2>
 
 - Language: Java
 - Networking: Java Socket API
@@ -120,7 +120,7 @@ Technologies Used
 - Thread Safety: AtomicInteger
 - I/O: Java I/O Streams
 
-Learning Objectives
+<h2>Learning Objectives</h2>
 
 Through these implementations, I am exploring:
 
@@ -133,7 +133,7 @@ Through these implementations, I am exploring:
 - How atomic variables help manage shared counters across multiple threads.
 - How I/O operations behave during concurrent client-server communication.
 
-Future Improvements
+<h2>Future Improvements</h2>
 
 Some areas I intend to explore and improve:
 
@@ -145,7 +145,7 @@ Some areas I intend to explore and improve:
 - Java NIO and non-blocking communication.
 - More detailed performance comparisons between server architectures.
 
-About This Project
+<h2>About This Project</h2>
 
 This project is part of my ongoing Java backend development learning journey.
 
