@@ -1,4 +1,4 @@
-#Java Networking & Concurrency Lab
+<h1>Java Networking & Concurrency Lab</h1>
 
 A hands-on Java project exploring TCP socket programming, client-server communication, multithreading, and thread-pool-based request handling.
 
